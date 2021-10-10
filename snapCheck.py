@@ -41,12 +41,12 @@ def main(argv):
     except getopt.GetoptError:
       print ('Number of arguments given:', len(sys.argv), 'arguments.')
       print ('Argument list:', str(sys.argv))
-      print ('Usage: checkSnap.py -c <countrycode> -p <phonenumber>')
+      print ('Usage: snapCheck.py -c <countrycode> -p <phonenumber>')
       sys.exit(2)
    
     for opt, arg in opts:
       if opt == '-h':
-         print ('Usage: checkSnap.py -c <countrycode> -p <phonenumber>')
+         print ('Usage: snapCheck.py -c <countrycode> -p <phonenumber>')
          sys.exit()
       elif opt in ("-c", "--country"):
          countrycode = arg
@@ -60,7 +60,7 @@ def main(argv):
       # Perform check()
       check(countrycode, phonenumber, xsrf_token)
     else:
-        print ('Usage: checkSnap.py -c <countrycode> -p <phonenumber>')
+        print ('Usage: snapCheck.py -c <countrycode> -p <phonenumber>')
         sys.exit('ERROR: You did not specify the mandatory arguments.')
 
 if __name__ == "__main__":
